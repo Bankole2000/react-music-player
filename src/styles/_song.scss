@@ -16,3 +16,33 @@
     font-size: 1.5rem;
   }
 }
+
+.music-image {
+  animation: rotate 6s linear infinite;
+  border: none;
+  animation-play-state: paused;
+  transform: rotate(0deg);
+}
+
+.music-image.playing {
+  animation-play-state: running;
+  border: 2px solid teal;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .song-container {
+    img {
+      width: 60%;
+    }
+  }
+}

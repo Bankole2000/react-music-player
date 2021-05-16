@@ -1,5 +1,8 @@
 .library {
   position: fixed;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 20rem;
@@ -17,7 +20,7 @@
   align-items: center;
   padding: 1rem 2rem;
   cursor: pointer;
-
+  transition: background-color 0.3s ease;
   img {
     width: 30%;
   }
@@ -55,4 +58,15 @@
 
 .selected {
   background-color: rgb(255, 228, 255);
+}
+
+.active-library{
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100vw;
+  }
 }
